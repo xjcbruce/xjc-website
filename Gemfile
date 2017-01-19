@@ -51,3 +51,10 @@ group :development, :test do
 end
 
 gem 'enumerize'
+
+gem 'activeadmin', '~> 1.0.0.pre4'
+# Plus integrations with:
+gem 'devise'
+gem 'cancan'
+# gem 'draper'
+# gem 'pundit'
