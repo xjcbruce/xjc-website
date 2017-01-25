@@ -58,3 +58,5 @@ gem 'devise'
 gem 'cancan'
 # gem 'draper'
 # gem 'pundit'
+# fix active admin problems
+gem 'jquery-ui-rails', '~> 5.0'

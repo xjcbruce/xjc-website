@@ -8,8 +8,8 @@ class CreateOrders < ActiveRecord::Migration
       t.string :addr_province
       t.string :addr_city
       t.integer :quantity, default: 0
-      t.integer :order_amount, default: 0
-      t.integer :pay_amount, default: 0
+      t.float :order_amount, default: 0.0
+      t.float :pay_amount, default: 0.0
       t.string :comment
       t.string :status
 

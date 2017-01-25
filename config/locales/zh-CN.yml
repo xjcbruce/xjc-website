@@ -1,0 +1,65 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+zh-CN:
+  time:
+    formats:
+      short: "%Y-%m-%d %H:%M"
+  id: "ID"
+  xjc:
+    admin:
+      view:
+        active_admin_inputs: "请输入管理员信息"
+  enumerize:
+    order:
+      status:
+        waiting: "待支付"
+        paid: "已支付"
+        confirmed: "已确认"
+        done: "已完成"
+        cancelled: "已取消"
+  active_admin:
+    comments:
+      delete_confirmation: "确认删除?"
+      delete: "删除"
+  activerecord:
+    models:
+      admin_user: "管理员"
+      product: "产品"
+    attributes:
+      admin_user:
+        email: "邮箱"
+        password: "密码"
+        current_sign_in_at: "登录时间"
+        sign_in_count: "登录次数"
+        created_at: "创建时间"
+        password_confirmation: "确认密码"
+      product:
+        number: "产品编号"
+        name: "产品名称"
+        description: "产品说明"
+        price: "产品定价"
+    errors:
+      models:
+        product:
+          attributes:
+            price:
+              greater_than_or_equal_to: "定价不能为负数"

@@ -17,7 +17,7 @@ ActiveAdmin.register AdminUser do
   filter :created_at
 
   form do |f|
-    f.inputs "Admin Details" do
+    f.inputs I18n.t("xjc.admin.view.active_admin_inputs") do
       f.input :email
       f.input :password
       f.input :password_confirmation

@@ -11,33 +11,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170118082214) do
+ActiveRecord::Schema.define(version: 20170119084738) do
+
+  create_table "active_admin_comments", force: :cascade do |t|
+    t.string   "namespace",     limit: 255
+    t.text     "body",          limit: 65535
+    t.string   "resource_id",   limit: 255,   null: false
+    t.string   "resource_type", limit: 255,   null: false
+    t.integer  "author_id",     limit: 4
+    t.string   "author_type",   limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
+  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+
+  create_table "admin_users", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+  end
+
+  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
+  add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "orders", force: :cascade do |t|
     t.integer  "product_id",      limit: 4
-    t.string   "order_uuid",      limit: 255,             null: false
+    t.string   "order_uuid",      limit: 255,               null: false
     t.string   "customer_name",   limit: 255
     t.string   "customer_mobile", limit: 255
     t.string   "addr_province",   limit: 255
     t.string   "addr_city",       limit: 255
     t.integer  "quantity",        limit: 4,   default: 0
-    t.integer  "order_amount",    limit: 4,   default: 0
-    t.integer  "pay_amount",      limit: 4,   default: 0
+    t.float    "order_amount",    limit: 24,  default: 0.0
+    t.float    "pay_amount",      limit: 24,  default: 0.0
     t.string   "comment",         limit: 255
     t.string   "status",          limit: 255
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
   end
 
   add_index "orders", ["order_uuid"], name: "index_orders_on_order_uuid", using: :btree
 
   create_table "products", force: :cascade do |t|
-    t.string   "number",      limit: 255,               null: false
+    t.string   "number",      limit: 255,                 null: false
     t.string   "name",        limit: 255
     t.text     "description", limit: 65535
-    t.integer  "price",       limit: 4,     default: 0
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.float    "price",       limit: 24,    default: 0.0
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
   add_index "products", ["number"], name: "index_products_on_number", using: :btree
