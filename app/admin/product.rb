@@ -19,6 +19,8 @@ ActiveAdmin.register Product do
 
   permit_params :number, :name, :description, :price
 
+  config.sort_order = 'number_asc'
+
   index do
     column :number do |product|
       link_to product.number, admin_product_path(product)
@@ -27,7 +29,7 @@ ActiveAdmin.register Product do
     column :description
     column :price
     actions do |product|
-      item "Add", add_price_admin_product_path(product), method: :put
+      item "Add", add_price_admin_product_path(product), method: :put if can? :add_price, product
     end
   end
 

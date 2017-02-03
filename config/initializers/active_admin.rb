@@ -78,6 +78,9 @@ ActiveAdmin.setup do |config|
   # doesn't have access to Dashboard, he'll end up in a redirect loop.
   # Method provided here should be defined in application_controller.rb.
   # config.on_unauthorized_access = :access_denied
+  config.authorization_adapter = ActiveAdmin::CanCanAdapter
+  config.cancan_ability_class = "AdminAbility"
+  config.on_unauthorized_access = :admin_access_denied
 
   # == Current User
   #
@@ -133,6 +136,7 @@ ActiveAdmin.setup do |config|
   #
   # You can customize the comment menu:
   # config.comments_menu = { parent: 'Admin', priority: 1 }
+  config.comments = false
 
   # == Batch Actions
   #
