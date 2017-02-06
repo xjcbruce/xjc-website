@@ -1,0 +1,13 @@
+// XJC SCSS Mixin Definition
+
+// 垂直方向比例定位
+// 如$percent=50%, 则居中定位
+// 配合position使用
+@mixin xjc-vertical-align($percent) {
+  top: $percent;
+  -webkit-transform: translateY(-$percent);
+  -moz-transform: translateY(-$percent);
+  -ms-transform: translateY(-$percent);
+  -o-transform: translateY(-$percent);
+  transform: translateY(-$percent);
+}
