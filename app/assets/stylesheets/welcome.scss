@@ -2,85 +2,128 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "xjc_mixin";
+.home-page {
+  $welcome-image-height: 600px;
 
-$welcome-image-height: 600px;
+  .welcome-image {
+    display: block;
+    height: $welcome-image-height;
 
-body {
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
-  font-size: 10px;
-  font-weight: 300;
-}
+    .welcome-content {
+      position: relative;
+      @include xjc-vertical-align(50%);
+      text-align: center;
 
-.welcome-image {
-  background-image: image-url("welcome.jpg");
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  height: $welcome-image-height;
-
-  .welcome-word {
-    color: #fff;
-    font-weight: 300;
-    font-size: 4.6rem;
+      .welcome-word {
+        font-weight: 300;
+        font-size: 4.6rem;
+        color: #fff;
+      }
+    }
   }
 
-  .welcome-content {
-    text-align: center;
+  .welcome-image-1 { @include xjc-set-background-image("welcome-bg-1.jpg"); }
+  .welcome-image-2 { @include xjc-set-background-image("welcome-bg-2.jpg"); }
+
+  .main-nav {
+    padding: 10px 0;
+    border-radius: 0;
+    margin-bottom: 20px;
+    border-width: 0 0 1px;
+
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: .075rem;
+
+    .brand-logo {
+      position: relative;
+      width: 119px;
+      height: 40px;
+      top: 5px;
+      display: block;
+      margin-left: 15px;
+      text-indent: -9999px;
+      background-image: image-url("brand-logo-contrast.png");
+      background-repeat: no-repeat;
+      background-size: 119px 40px;
+    }
+
+    .navbar-nav {
+      float: right;
+
+      li a {
+        color: #fff;
+        border-style: solid;
+        border-width: 2px;
+        border-color: transparent;
+        &:hover, &:focus, &:active { color: #fff }
+      }
+    }
+  }
+
+  .affix {
+    background-color: #fff;
+
+    .brand-logo {
+      background-image: image-url("brand-logo.png");
+    }
+
+    .navbar-nav {
+      li a {
+        color: #222;
+        &:hover { color: #222 }
+      }
+    }
+  }
+
+  .welcome-features {
     position: relative;
     @include xjc-vertical-align(50%);
-  }
-}
 
-.main-nav {
-  padding: 10px 0;
-  border-radius: 0;
-  margin-bottom: 20px;
-  border-width: 0 0 1px;
+    padding: 20px;
 
-  background-color: transparent;
-  font-size: 1.4rem;
-  font-weight: 300;
-  letter-spacing: .075rem;
-
-  .brand-logo {
-    background-image: image-url("brand-logo-contrast.png");
-    background-repeat: no-repeat;
-    background-size: 119px 40px;
-    width: 119px;
-    height: 40px;
-    top: 5px;
-    position: relative;
-    display: block;
-    text-indent: -9999px;
-  }
-
-  .navbar-nav {
-    float: right;
-
-    li a {
+    .feature-title {
+      padding-bottom: 30px;
+      font-weight: 300;
+      font-size: 4.6rem;
       color: #fff;
-      border-style: solid;
-      border-width: 2px;
-      border-color: transparent;
-      &:hover { color: #fff }
+      text-align: center;
+    }
+
+    .feature-item {
+      padding: 0 30px;
+      font-size: 1.5rem;
+      letter-spacing: .15rem;
+      font-weight: 100;
+      color: #fff;
+      line-height: 1.6;
+
+      .feature-item-title {
+        font-weight: 300;
+        color: #b5cd42;
+      }
+    }
+
+    .feature-btn {
+      @media (max-width: $screen-sm-max) { padding: 10px 0 20px 0 }
+      @media (min-width: $screen-md-min) { padding: 100px 50px 0 50px }
+      text-align: center !important;
+
+      .feature-btn-order {
+        color: #fff;
+        background-color: #b5cd42;
+        border-color: #b5cd42;
+        font-size: 1.8rem;
+        font-weight: 300;
+
+        &:hover, &:focus, &:active {
+          background-color: #a2b731;
+          border-color: #a2b731;
+        }
+      }
     }
   }
 }
 
-.affix {
-  background-color: #fff;
-
-  .brand-logo {
-    background-image: image-url("brand-logo.png");
-  }
-
-  .navbar-nav {
-    li a {
-      color: #222;
-      &:hover { color: #222 }
-    }
-  }
-}
 

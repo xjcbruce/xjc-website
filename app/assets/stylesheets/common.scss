@@ -1,0 +1,30 @@
+@import "xjc_mixin";
+
+body {
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.footer {
+  /* Positioning 定位 */
+  /* Box-model 盒模型 */
+  display: block;
+  padding: 20px 0;
+  /* Typography 文字 */
+  text-align: center;
+  color: #7d7d7d;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  /* Visual 外观 */
+  background-color: #444;
+  /* Misc 其它 */
+
+  .md-text-left {
+    @media (min-width: $screen-md-min) { text-align: left }
+  }
+
+  .md-text-right {
+    @media (min-width: $screen-md-min) { text-align: right }
+  }
+}
