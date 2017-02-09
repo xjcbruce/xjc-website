@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -62,3 +62,10 @@ gem 'cancan'
 gem 'jquery-ui-rails', '~> 5.0'
 
 gem 'bootstrap-sass', '~> 3.3.6'
+
+group :development do
+  gem 'capistrano', '~> 3.6'
+  gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano-unicorn-nginx', '~> 3.2.0'
+  gem 'capistrano-safe-deploy-to', '~> 1.1.1'
+end
