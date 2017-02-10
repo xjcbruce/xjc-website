@@ -65,7 +65,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 group :development do
   gem 'capistrano', '~> 3.6'
+  gem 'capistrano-rvm'
   gem 'capistrano-rails', '~> 1.2'
   gem 'capistrano-unicorn-nginx', '~> 3.2.0'
-  gem 'capistrano-safe-deploy-to', '~> 1.1.1'
+  # gem 'capistrano-safe-deploy-to', '~> 1.1.1'
 end

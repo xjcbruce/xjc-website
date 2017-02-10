@@ -8,7 +8,7 @@ set :application, "xjc_website"
 set :repo_url, "git@github.com:xjcbruce/xjc-website.git"
 
 # Default branch is :master
-ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
@@ -35,3 +35,10 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+# require "capistrano/rvm"
+# RVM path selection: :rvm_type
+# :auto (default): just tries to find the correct path. ~/.rvm wins over /usr/local/rvm
+# :system: defines the RVM path to /usr/local/rvm
+# :user: defines the RVM path to ~/.rvm
+set :rvm_type, :auto
