@@ -273,5 +273,5 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
   # http://stackoverflow.com/questions/18080910/devise-secret-key-was-not-set
-  config.secret_key = ENV['DEVISE_SECRET_KEY'] if Rails.env.production?
+  # config.secret_key = ENV['DEVISE_SECRET_KEY'] if Rails.env.production?
 end

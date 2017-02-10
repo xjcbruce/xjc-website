@@ -67,7 +67,7 @@ group :development do
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rvm'
   gem 'capistrano-rails', '~> 1.2'
-  # gem 'capistrano-unicorn-nginx', '~> 3.2.0'
-  gem 'capistrano-unicorn-nginx', :git => 'git@github.com:riseshia/capistrano-unicorn-nginx.git'
+  gem 'capistrano-unicorn-nginx', '~> 3.4.0'
+  # gem 'capistrano-unicorn-nginx', :git => 'git@github.com:riseshia/capistrano-unicorn-nginx.git'
   gem 'capistrano-safe-deploy-to', '~> 1.1.1'
 end
