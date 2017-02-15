@@ -36,6 +36,13 @@ zh-CN:
         confirmed: "已确认"
         done: "已完成"
         cancelled: "已取消"
+    order_history:
+      operation:
+        create_order: "创建订单"
+        start_pay: "发起支付"
+        pay_success: "支付返回且成功"
+        pay_failed: "支付返回但支付失败"
+        cancel_order: "取消订单"
   active_admin:
     comments:
       delete_confirmation: "确认删除?"
