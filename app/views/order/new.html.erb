@@ -1,0 +1,15 @@
+<% content_for :title do %>
+  <title>提交您的需求</title>
+<% end %>
+
+<h1>请告诉我们您的需求和联系方式</h1>
+
+<%= form_for @order, url: order_create_path do |f| %>
+    <%= f.label "您的姓名" %>
+    <%= f.text_field :customer_name %>
+    <%= f.label "联系电话" %>
+    <%= f.text_field :customer_mobile %>
+    <%= f.label "您的需求描述" %>
+    <%= f.text_area :comment %>
+    <%= f.submit "提交" %>
+<% end %>

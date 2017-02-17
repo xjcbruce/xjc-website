@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.home-page-body {
+  padding-top: 0;
+}
+
 .home-page {
   $welcome-image-height: 600px;
 

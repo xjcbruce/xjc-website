@@ -4,6 +4,7 @@ body {
   font-family: "Open Sans",Helvetica,Arial,sans-serif;
   font-size: 10px;
   font-weight: 300;
+  padding-top: 70px;
 }
 
 .footer {
@@ -26,5 +27,49 @@ body {
 
   .md-text-right {
     @media (min-width: $screen-md-min) { text-align: right }
+  }
+}
+
+.header-nav {
+  .main-nav {
+    /* Positioning 定位 */
+    /* Box-model 盒模型 */
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 0;
+    border-width: 0 0 1px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,.08);
+    /* Typography 文字 */
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: .075rem;
+    /* Visual 外观 */
+    background-color: #fff;
+    /* Misc 其它 */
+
+    .brand-logo {
+      position: relative;
+      width: 119px;
+      height: 40px;
+      top: 5px;
+      display: block;
+      margin-left: 15px;
+      text-indent: -9999px;
+      background-image: image-url("brand-logo.png");
+      background-repeat: no-repeat;
+      background-size: 119px 40px;
+    }
+
+    .navbar-nav {
+      float: right;
+
+      li a {
+        color: #222;
+        border-style: solid;
+        border-width: 2px;
+        border-color: transparent;
+        &:hover, &:focus, &:active { color: #222 }
+      }
+    }
   }
 }

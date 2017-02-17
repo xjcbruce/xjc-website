@@ -33,7 +33,7 @@ class Order < ActiveRecord::Base
       cancel_history.save
       true
     else
-      logger.info("取消订单失败: 订单号=#{order_uuid}, ID=#{id}, 操作者=#{operator}")
+      logger.warn("取消订单失败: 订单号=#{order_uuid}, ID=#{id}, 操作者=#{operator}")
       false
     end
   end
