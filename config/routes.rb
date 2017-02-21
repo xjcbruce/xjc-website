@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'order/new'
   post 'order/create'
+  get 'welcome/sub_cities'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
