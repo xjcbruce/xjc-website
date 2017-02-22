@@ -7,6 +7,7 @@ cityOption = (city) -> "<option value=\"" + city.code + "\">" + city.name + "</o
 
 getSubCities = ->
   father_code = $('#order_addr_province').find('option:selected').val()
+  console.log father_code
   $.getJSON('/welcome/sub_cities.json?prov='+father_code, (cities) ->
     if cities.length == 0
       $('#order_addr_city').hide()
@@ -18,7 +19,8 @@ getSubCities = ->
   )
 
 # 事件
-$(document).ready -> getSubCities()
+$(document).ready ->
+  getSubCities()
 
 $('#order_addr_province').change -> getSubCities()
 

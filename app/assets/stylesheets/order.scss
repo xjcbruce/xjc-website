@@ -2,4 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.order-new-page {
+  .order-page-header {
+    /* Positioning 定位 */
+    position: relative;
+    /* Box-model 盒模型 */
+    margin-bottom: 50px;
+    padding: 35px 0;
+    /* Typography 文字 */
+    text-align: center;
+    color: #fff;
+    font-size: 3.8rem;
+    letter-spacing: .1rem;
+    font-weight: 300;
+    /* Visual 外观 */
+    background-color: #799aca !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Misc 其它 */
+  }
 
+  .order-form {
+    margin-bottom: 70px;
+
+    .order-label {
+      font-size: 1.2rem;
+      font-weight: 100;
+      color: #5e5e5e;
+    }
+
+    .order-btn {
+      color: #fff;
+      background-color: #799aca;
+      border-color: #799aca;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
+}

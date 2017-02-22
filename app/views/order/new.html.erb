@@ -1,18 +1,46 @@
 <% content_for :title do %>
-  <title>提交您的需求</title>
+    <title>提交您的需求</title>
 <% end %>
 
-<h1>请告诉我们您的需求和联系方式</h1>
+<div class="order-new-page">
+  <div class="order-page-header">
+    <h2>请告诉我们您的需求和联系方式</h2>
+  </div>
 
-<%= form_for @order, url: order_create_path do |f| %>
-    <%= f.label "您的姓名" %>
-    <%= f.text_field :customer_name %>
-    <%= f.label "联系电话" %>
-    <%= f.text_field :customer_mobile %>
-    <%= f.label "所在城市" %>
-    <%= f.collection_select :addr_province, City.provinces, :gb_code, :name %>
-    <%= f.select :addr_city, "" %>
-    <%= f.label "您的需求描述" %>
-    <%= f.text_area :comment %>
-    <%= f.submit "提交" %>
-<% end %>
+  <div class="container">
+    <div class="row order-form">
+      <%= form_for @order, url: order_create_path do |f| %>
+          <div class="row">
+            <div class="col-sm-4 col-sm-offset-2">
+              <div class="form-group">
+                <%= f.label '简要描述您的需求', class: 'control-label order-label' %>
+                <%= f.text_area :comment, size: '10x8', class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= f.label '请留下您的姓名', class: 'control-label order-label' %>
+                <%= f.text_field :customer_name, class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label '联系电话', class: 'control-label order-label' %>
+                <%= f.text_field :customer_mobile, class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label '所在城市', class: 'control-label order-label' %>
+                <div class="form-inline">
+                  <%= f.collection_select :addr_province, City.provinces, :gb_code, :name, {}, {class: 'form-control selectpicker'} %>
+                  <%= f.select :addr_city, '', {}, {class: 'form-control selectpicker'} %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-offset-5 col-md-2 text-center">
+              <%= f.submit '提  交', class: 'btn btn-primary btn-block order-btn' %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
