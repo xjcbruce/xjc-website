@@ -2,8 +2,10 @@
   <nav class="nav navbar-default navbar-fixed-top main-nav" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <%= link_to 'xinjiechang.com', root_path, { class: "brand-logo" } %>
-        <!--<a class="brand-logo" href="/">xinjiechang.com</a>-->
+        <%= link_to 'xinjiechang.com', root_path, { class: "brand-logo hidden-xs" } %>
+        <div class="visible-xs-block col-xs-offset-3 col-xs-6 text-center">
+          <%= link_to 'xinjiechang.com', root_path, { class: "brand-logo-xs" } %>
+        </div>
       </div>
 
       <div class="collapse navbar-collapse">

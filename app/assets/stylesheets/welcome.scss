@@ -53,6 +53,18 @@
       background-size: 119px 40px;
     }
 
+    .brand-logo-xs {
+      width: 119px;
+      height: 40px;
+      display: block;
+      margin-left: 15px;
+      text-indent: -9999px;
+      text-align: center;
+      background-image: image-url("brand-logo-contrast.png");
+      background-repeat: no-repeat;
+      background-size: 119px 40px;
+    }
+
     .navbar-nav {
       float: right;
 
@@ -70,6 +82,10 @@
     background-color: #fff;
 
     .brand-logo {
+      background-image: image-url("brand-logo.png");
+    }
+
+    .brand-logo-xs {
       background-image: image-url("brand-logo.png");
     }
 

@@ -3,7 +3,10 @@
   <nav class="nav navbar-default navbar-fixed-top main-nav" role="navigation" data-spy="affix" data-offset-top="100">
     <div class="container">
       <div class="navbar-header">
-        <a class="brand-logo" href="/">xinjiechang.com</a>
+        <a class="brand-logo hidden-xs" href="/">xinjiechang.com</a>
+        <div class="visible-xs-block col-xs-offset-3 col-xs-6 text-center">
+          <a class="brand-logo-xs" href="/">xinjiechang.com</a>
+        </div>
       </div>
 
       <div class="collapse navbar-collapse">
@@ -25,7 +28,9 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-12">
-            <h1 class="welcome-word">做你喜欢，无畏成败</h1>
+            <h1 class="welcome-word hidden-xs">做你喜欢，无畏成败</h1>
+            <h1 class="welcome-word visible-xs-block">做你喜欢</h1>
+            <h1 class="welcome-word visible-xs-block">无畏成败</h1>
           </div>
         </div>
       </div>
@@ -36,25 +41,25 @@
     <div class="welcome-features">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-md-12">
             <h1 class="feature-title">我们提供</h1>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-sm-4 feature-item">
+          <div class="col-md-4 feature-item">
             <h3 class="feature-item-title">解决方案</h3>
             <p>
               根据您企业或组织的实际情况，量身订做适合的互联网信息系统解决方案
             </p>
           </div>
-          <div class="col-sm-4 feature-item">
+          <div class="col-md-4 feature-item">
             <h3 class="feature-item-title">产品设计</h3>
             <p>
               基于您的奇思妙想，设计专业的互联网信息系统产品
             </p>
           </div>
-          <div class="col-sm-4 feature-item">
+          <div class="col-md-4 feature-item">
             <h3 class="feature-item-title">系统研发</h3>
             <p>
               将您的想法，真正变为可以实际运用在生产中的网站和应用程序
@@ -63,7 +68,7 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 feature-btn">
+          <div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4 feature-btn">
             <%= link_to '是的，我需要', order_new_path, { class: "btn btn-default btn-lg btn-block feature-btn-order", role: "button"} %>
             <!--<a class="btn btn-default btn-lg btn-block feature-btn-order" href="#" role="button">是的，我需要</a>-->
           </div>

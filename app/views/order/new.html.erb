@@ -4,13 +4,15 @@
 
 <div class="order-new-page">
   <div class="order-page-header">
-    <h2>请告诉我们您的需求和联系方式</h2>
+    <h2 class="hidden-xs">请告诉我们您的需求和联系方式</h2>
+    <h2 class="visible-xs-block">请告诉我们</h2>
+    <h2 class="visible-xs-block">您的需求和联系方式</h2>
   </div>
 
   <div class="container">
     <% unless flash.now[:alert].blank? %>
         <div class="row">
-          <div class="col-sm-offset-2 col-sm-8">
+          <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10">
             <div class="alert alert-warning alert-dismissible" role="alert">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span></button>
@@ -22,13 +24,13 @@
     <div class="row order-form">
       <%= form_for @order, url: order_create_path do |f| %>
           <div class="row">
-            <div class="col-sm-4 col-sm-offset-2">
+            <div class="col-md-offset-2 col-md-4 col-xs-offset-1 col-xs-10">
               <div class="form-group">
                 <%= f.label '简要描述您的需求', class: 'control-label order-label' %>
                 <%= f.text_area :comment, size: '10x8', class: 'form-control' %>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4 col-xs-offset-1 col-xs-10">
               <div class="form-group">
                 <%= f.label '请留下您的姓名', class: 'control-label order-label' %>
                 <%= f.text_field :customer_name, class: 'form-control' %>
@@ -47,7 +49,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-12 col-md-offset-5 col-md-2 text-center">
+            <div class="col-md-offset-5 col-md-2 col-xs-offset-1 col-xs-10 text-center">
               <%= f.submit '提  交', class: 'btn btn-primary btn-block order-btn' %>
             </div>
           </div>
