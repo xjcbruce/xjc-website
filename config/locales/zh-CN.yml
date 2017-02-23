@@ -22,7 +22,7 @@
 zh-CN:
   time:
     formats:
-      short: "%Y-%m-%d %H:%M"
+      short: "%Y-%m-%d %H:%M:%S"
   id: "ID"
   xjc:
     admin:
@@ -51,6 +51,7 @@ zh-CN:
     models:
       admin_user: "管理员"
       product: "产品"
+      order: "订单"
     attributes:
       admin_user:
         email: "邮箱"
@@ -64,6 +65,18 @@ zh-CN:
         name: "产品名称"
         description: "产品说明"
         price: "产品定价"
+      order:
+        order_uuid: "订单编号"
+        customer_name: "客户姓名"
+        customer_mobile: "客户电话"
+        status: "订单状态"
+        created_at: "提交时间"
+        comment: "订单描述或备注"
+      order_history:
+        created_at: "操作时间"
+        operation: "操作事件"
+        operator: "操作人"
+        comment: "备注"
     errors:
       models:
         product:

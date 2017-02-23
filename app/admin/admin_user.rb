@@ -1,7 +1,8 @@
 ActiveAdmin.register AdminUser do
+
   permit_params :email, :password, :password_confirmation
 
-  menu if: proc{ can? :manage, :all }
+  menu priority: 100, if: proc{ can? :manage, :all }
 
   index do
     selectable_column

@@ -15,7 +15,7 @@ ActiveAdmin.register Product do
 
   config.batch_actions = false
 
-  menu priority: 5
+  menu priority: 10
 
   permit_params :number, :name, :description, :price
 
@@ -51,7 +51,7 @@ ActiveAdmin.register Product do
       row :price
       row :description
     end
-    active_admin_comments
+    # active_admin_comments
   end
 
   member_action :add_price, method: :put do

@@ -28,6 +28,16 @@ RSpec.describe City, type: :model do
       expect(result.size).to eq(0)
     end
 
+    it "根据存在的城市编码获取城市名称" do
+      name = City.gb_code_to_name "110000"
+      expect(name).to eq("北京市")
+    end
+
+    it "根据不存在的城市编码获取城市名称" do
+      name = City.gb_code_to_name "111111"
+      expect(name).to eq('')
+    end
+
   end
 
 

@@ -4,7 +4,8 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Xjc Website"
+  config.site_title = "XJC Website"
+  # config.footer = "© 2016 - 2017 XinJieChang Technology Inc. All Rights Reserved. 蜀ICP备17002618号 四川新介昌科技有限公司"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.

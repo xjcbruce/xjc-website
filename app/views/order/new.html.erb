@@ -8,6 +8,17 @@
   </div>
 
   <div class="container">
+    <% unless flash.now[:alert].blank? %>
+        <div class="row">
+          <div class="col-sm-offset-2 col-sm-8">
+            <div class="alert alert-warning alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <%= flash.now[:alert] %>
+            </div>
+          </div>
+        </div>
+    <% end %>
     <div class="row order-form">
       <%= form_for @order, url: order_create_path do |f| %>
           <div class="row">

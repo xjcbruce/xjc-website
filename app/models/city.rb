@@ -7,4 +7,9 @@ class City < ActiveRecord::Base
     where("father_gb_code = ?", father_gb_code)
   end
 
+  def self.gb_code_to_name(gb_code)
+    city = City.find_by gb_code: gb_code
+    city.nil? ? '' : city.name
+  end
+
 end
