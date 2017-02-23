@@ -40,10 +40,13 @@ ActiveAdmin.register Order do
   show title: :order_uuid do
     attributes_table do
       row :order_uuid
+      row :comment
       row :customer_name
       row :customer_mobile
       row :created_at
-      row :comment
+      row "客户地址" do |order|
+        order.order_address
+      end
     end
 
     panel "订单历史" do
