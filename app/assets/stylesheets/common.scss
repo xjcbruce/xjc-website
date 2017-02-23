@@ -65,9 +65,8 @@ body {
       width: 119px;
       height: 40px;
       display: block;
-      margin-left: 15px;
+      margin: 0 auto; // 图片居中
       text-indent: -9999px;
-      text-align: center;
       background-image: image-url("brand-logo.png");
       background-repeat: no-repeat;
       background-size: 119px 40px;

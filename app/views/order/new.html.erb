@@ -43,6 +43,7 @@
                 <%= f.label '所在城市', class: 'control-label order-label' %>
                 <div class="form-inline">
                   <%= f.collection_select :addr_province, City.provinces, :gb_code, :name, {}, {class: 'form-control selectpicker'} %>
+                  <label class="visible-xs-inline-block"></label>
                   <%= f.select :addr_city, '', {}, {class: 'form-control selectpicker'} %>
                 </div>
               </div>
