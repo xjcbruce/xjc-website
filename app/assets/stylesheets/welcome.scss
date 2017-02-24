@@ -42,26 +42,26 @@
 
     .brand-logo {
       position: relative;
-      width: 119px;
+      width: 140px;
       height: 40px;
       top: 5px;
       display: block;
       margin-left: 15px;
       text-indent: -9999px;
-      background-image: image-url("brand-logo-contrast.png");
+      background-image: image-url($xjc-logo-white);
       background-repeat: no-repeat;
-      background-size: 119px 40px;
+      background-size: 140px 40px;
     }
 
     .brand-logo-xs {
-      width: 119px;
+      width: 140px;
       height: 40px;
       display: block;
       margin: 0 auto; // 图片居中
       text-indent: -9999px;
-      background-image: image-url("brand-logo-contrast.png");
+      background-image: image-url($xjc-logo-white);
       background-repeat: no-repeat;
-      background-size: 119px 40px;
+      background-size: 140px 40px;
     }
 
     .navbar-nav {
@@ -81,11 +81,11 @@
     background-color: #fff;
 
     .brand-logo {
-      background-image: image-url("brand-logo.png");
+      background-image: image-url($xjc-logo-black);
     }
 
     .brand-logo-xs {
-      background-image: image-url("brand-logo.png");
+      background-image: image-url($xjc-logo-black);
     }
 
     .navbar-nav {
