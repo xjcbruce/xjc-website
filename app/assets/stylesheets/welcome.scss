@@ -68,11 +68,15 @@
       float: right;
 
       li a {
-        color: #fff;
-        border-style: solid;
-        border-width: 2px;
-        border-color: transparent;
-        &:hover, &:focus, &:active { color: #fff }
+        padding-top: 10px;
+        color: #b5cd42;
+        border-color: #b5cd42;
+        border-width: 1px;
+
+        &:hover, &:focus, &:active {
+          color: #fff;
+          background-color: #b5cd42;
+        }
       }
     }
   }
@@ -90,8 +94,8 @@
 
     .navbar-nav {
       li a {
-        color: #222;
-        &:hover { color: #222 }
+        color: #b5cd42;
+        &:hover { color: #fff }
       }
     }
   }

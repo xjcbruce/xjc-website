@@ -8,6 +8,7 @@ Rails.application.config.assets.version = '1.0'
 
 # Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "flatui", "dist")
 Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "bootstrap-select")
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "buttons")
 
 # Precompile additional assets.
 # application.js, application.scss, and all non-JS/CSS in app/assets folder are already added.
@@ -15,4 +16,5 @@ Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "bo
 
 # Rails.application.config.assets.precompile += %w( dist/css/flat-ui.css )
 Rails.application.config.assets.precompile += %w( css/bootstrap-select.css )
+Rails.application.config.assets.precompile += %w( css/buttons.css )
 Rails.application.config.assets.precompile += %w( welcome.js order.js )
